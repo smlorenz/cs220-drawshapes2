@@ -278,6 +278,24 @@ public class DrawShapes extends JFrame
             }
         });
         
+        addToMenu(colorMenu, "Teal", new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String text=e.getActionCommand();
+                System.out.println(text);
+                // change the color instance variable to teal!!!
+                color = new Color(0,1,1,0.75f);
+            }
+        });
+        
+        addToMenu(colorMenu, "Black", new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String text=e.getActionCommand();
+                System.out.println(text);
+                // all abstract art needs some black spots
+                color = new Color(0,0,0,1f);
+            }
+        });
+        
         // shape menu
         JMenu shapeMenu = new JMenu("Shape");
         menuBar.add(shapeMenu);
