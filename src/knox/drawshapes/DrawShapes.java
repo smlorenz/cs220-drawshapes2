@@ -339,6 +339,15 @@ public class DrawShapes extends JFrame
             }
         });
         
+     // triangle but yikes
+        addToMenu(shapeMenu, "Triangle", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Triangle");
+                shapeType = ShapeType.TRIANGLE;
+            }
+        });
+        
         
         // operation mode menu
         JMenu operationModeMenu=new JMenu("Operation");

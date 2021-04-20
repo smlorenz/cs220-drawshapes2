@@ -203,6 +203,16 @@ public class Scene implements Iterable<IShape>
                 Rectangle rec = new Rectangle(new Point(left, top), width, height, color);
                 rec.setSelected(selected);
                 addShape(rec);
+            } else if (type.startsWith("TRIANGLE")) {
+                // TRIAGNLE
+                int base = scan.nextInt();
+                int centerx = scan.nextInt();
+                int centery = scan.nextInt();
+                Color color = Util.stringToColor(scan.next());
+                boolean selected = Boolean.parseBoolean(scan.next());
+                Triangle tri = new Triangle(new Point(centerx, centery), base, color);
+                tri.setSelected(selected);
+                addShape(tri);
             }
         }
     }
