@@ -28,7 +28,8 @@ public class DrawShapes extends JFrame
     private enum ShapeType {
         SQUARE,
         CIRCLE,
-        RECTANGLE
+        RECTANGLE, 
+        TRIANGLE
     }
     
     private DrawShapesPanel shapePanel;
@@ -410,6 +411,14 @@ public class DrawShapes extends JFrame
             	} else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             		scene.moveSelected(0, 50);
             	} else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            		scene.moveSelected(50, 0);
+            	} else if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+            		scene.moveSelected(25,0);
+            		scene.moveSelected(0, 25);
+            		scene.moveSelected(-50, 0);
+            	} else if (e.getKeyCode() == KeyEvent.VK_M) {
+            		scene.moveSelected(25,0);
+            		scene.moveSelected(0, 25);
             		scene.moveSelected(50, 0);
             	}
             	repaint();
