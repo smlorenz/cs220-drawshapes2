@@ -10,8 +10,8 @@ public class Triangle extends AbstractShape {
 	//int center;
 
 	public Triangle(Point tip, int base, Color color) {
-		super(new Point(tip.x, tip.y), color);
-        boundingBox = new BoundingBox(tip.x - base/2, tip.x + base/2, tip.y - base, tip.y + base);
+		super(tip, color);
+        boundingBox = new BoundingBox(tip.x - base/2, tip.x + base/2, tip.y - base/2, tip.y + base/2);
         this.base = base;
 	}
 
@@ -27,6 +27,14 @@ public class Triangle extends AbstractShape {
                 base,
                 base);
     }
+	 public String toString() {
+	        return String.format("TRIANGLE %d %d %d %s %s", 
+	                this.getAnchorPoint().x, 
+	                this.getAnchorPoint().y,
+	                this.base,
+	                Util.colorToString(this.getColor()),
+	                this.isSelected());
+	    }
 
 	@Override
 	public void scale(double d) {
