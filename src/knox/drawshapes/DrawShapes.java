@@ -388,7 +388,11 @@ public class DrawShapes extends JFrame
             	if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             		scene.moveSelected(-50, 0);
             	} else if (e.getKeyCode() == KeyEvent.VK_UP) {
+            		scene.moveSelected(0, 50);
+            	} else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             		scene.moveSelected(0, -50);
+            	} else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            		scene.moveSelected(50, 0);
             	}
             	repaint();
             }
