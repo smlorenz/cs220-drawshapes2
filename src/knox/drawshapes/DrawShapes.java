@@ -296,6 +296,18 @@ public class DrawShapes extends JFrame
             }
         });
         
+        //clear menu
+        JMenu clear = new JMenu("Clear");
+        menuBar.add(clear);
+        
+        addToMenu(clear, "Clear all", new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent c) {
+        		scene.clear();
+        		repaint();
+        	}
+        });
+        
         // shape menu
         JMenu shapeMenu = new JMenu("Shape");
         menuBar.add(shapeMenu);
