@@ -330,6 +330,15 @@ public class DrawShapes extends JFrame
             }
         });
         
+        // rectangle bc i want him seen
+        addToMenu(shapeMenu, "Rectangle", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Rectangle");
+                shapeType = ShapeType.RECTANGLE;
+            }
+        });
+        
         
         // operation mode menu
         JMenu operationModeMenu=new JMenu("Operation");
