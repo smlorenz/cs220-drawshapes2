@@ -412,7 +412,7 @@ public class DrawShapes extends JFrame
             		scene.moveSelected(0, 50);
             	} else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             		scene.moveSelected(50, 0);
-            	} else if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+            	} else if (e.getKeyCode() == KeyEvent.VK_N) {
             		scene.moveSelected(25,0);
             		scene.moveSelected(0, 25);
             		scene.moveSelected(-50, 0);
@@ -433,6 +433,10 @@ public class DrawShapes extends JFrame
             	System.out.println("key typed: " + e.getKeyChar());
             	if (e.getKeyChar() == KeyEvent.VK_BACK_SPACE) {
             		scene.removeSelected();
+            	} else if (e.getKeyChar() == KeyEvent.VK_ENTER) {
+            		System.out.println("To make a car, try using a rectangle and two circles!");
+            		System.out.println("To play a game, try using the m and n keys along with the arrows!");
+            		System.out.println("Explore color choices!");
             	}
             	repaint();
             }
