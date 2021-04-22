@@ -22,7 +22,7 @@ public class Util
             return Color.BLUE;
         } else if (color.equals("GREEN")) {
         	return Color.GREEN;
-        }
+        } 
         throw new UnsupportedOperationException("Unexpected color: "+color);
     }
 }
