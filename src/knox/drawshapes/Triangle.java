@@ -8,12 +8,12 @@ public class Triangle extends AbstractShape {
 	
 	int bottom = 3;
 	int base;
-	int[] x = {75, 150, 225};
-	int[] y = {125, 50, 125};
+//	int[] x = {75, 150, 225};
+//	int[] y = {125, 50, 125};
 
-	public Triangle(Point tip, Color color, int base) {
-		super(tip, color);
-        boundingBox = new BoundingBox(tip.y+base, tip.y-base, tip.x-base/2, tip.x+base/2);
+	public Triangle(Color color, int base, Point p) {
+		super(p, color);
+        boundingBox = new BoundingBox(p.x, p.x+base, p.y-base, p.y); //change?
         this.base = base;
 	}
 
@@ -24,8 +24,12 @@ public class Triangle extends AbstractShape {
         } else {
             g.setColor(getColor());
         }
+        int[] x = {getAnchorPoint().x, getAnchorPoint().x+base/2,  getAnchorPoint().x+base}; //change order
+    	int[] y = {getAnchorPoint().y, getAnchorPoint().y-base, getAnchorPoint().y};
         //g.drawPolygon(x, y, bottom);
-        g.fillPolygon(x, y, bottom);
+        g.fillPolygon(x, y, 3);
+        System.out.println(getAnchorPoint().x);
+        System.out.println(getAnchorPoint().y);
     }
 	 public String toString() {
 	        return String.format("TRIANGLE %d %d %d %s %s", 
@@ -38,7 +42,7 @@ public class Triangle extends AbstractShape {
 
 	@Override
 	public void scale(double d) {
-		this.bottom = (int)(d*this.bottom);	
+		this.base = (int)(d*this.base);	
 	}
 
 }

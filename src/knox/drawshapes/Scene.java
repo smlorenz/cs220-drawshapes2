@@ -210,7 +210,7 @@ public class Scene implements Iterable<IShape>
                 int centery = scan.nextInt();
                 Color color = Util.stringToColor(scan.next());
                 boolean selected = Boolean.parseBoolean(scan.next());
-                Triangle tri = new Triangle(new Point(centerx, centery), color, base);
+                Triangle tri = new Triangle(color, base, new Point(centerx, centery));
                 tri.setSelected(selected);
                 addShape(tri);
             }

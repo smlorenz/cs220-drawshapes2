@@ -90,6 +90,12 @@ public class DrawShapes extends JFrame
                                 100, 
                                 200,
                                 color));
+                    } else if (shapeType == ShapeType.TRIANGLE) {
+                        scene.addShape(new Triangle(
+                        		color,
+                        		100,
+                                e.getPoint()
+                                ));
                     }
                     
                 } else if (e.getButton()==MouseEvent.BUTTON2) {
@@ -346,6 +352,7 @@ public class DrawShapes extends JFrame
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Triangle");
                 shapeType = ShapeType.TRIANGLE;
+                repaint();
             }
         });
         
