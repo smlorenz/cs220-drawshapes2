@@ -315,6 +315,34 @@ public class DrawShapes extends JFrame
         	}
         });
         
+        //hint
+        JMenu hint = new JMenu("Hint");
+        menuBar.add(hint);
+        
+        addToMenu(hint, "House", new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent c) {
+        		System.out.println("Use a square and a triangle to make a house! Play with scale to add designs!");
+        	}
+        	
+        });
+        
+        addToMenu(hint, "Car", new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent c) {
+        		System.out.println("Use a rectangle and circles to make different types of cars!");
+        	}
+        	
+        });
+        
+        addToMenu(hint, "Games", new ActionListener() {
+        	@Override
+        	public void actionPerformed(ActionEvent c) {
+        		System.out.println("Use different keys to play games and move the shapes!");
+        	}
+        	
+        });
+        
         // shape menu
         JMenu shapeMenu = new JMenu("Shape");
         menuBar.add(shapeMenu);

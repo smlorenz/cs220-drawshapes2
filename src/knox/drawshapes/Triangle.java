@@ -13,7 +13,7 @@ public class Triangle extends AbstractShape {
 
 	public Triangle(Color color, int base, Point p) {
 		super(p, color);
-        boundingBox = new BoundingBox(p.x, p.x+base, p.y-base, p.y); //change?
+        boundingBox = new BoundingBox(p.x, p.x+base, p.y-base, p.y); //
         this.base = base;
 	}
 
